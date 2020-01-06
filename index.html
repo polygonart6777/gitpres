@@ -25,9 +25,238 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+				  <section>
+        <h1>All about Git!</h1>
+        <p class="fragment fade-up">How can we use Git and GitHub for Chris's open source linear algebra textbook? </p>
+        <a class="fragment fade-up" href = "https://pretextbook.org/gfa/html/introduction.html">https://pretextbook.org/gfa/html/introduction.html </a>
+      </section>
+
+        <section>
+			<section><h1>What is Git? </h1></section>
+			<section> <p> It is like a seat belt–you feel unsafe without it.</p> </section> 
+      		<section><p>Git is a free and open source distributed version control system.  It is also known as a source code management system.  It allows you to track changes in your code so that previous versions are readily available.  Git runs locally.</section>
+      			<section>
+      				<img src=naming.png width=110%>
+      			</section>
+    		<section> Not only does git give you version control, but it also allows you to work on components of your project with <em> git branch </em>.  The branches can all be merged together at a later time with <em> git merge </em>. </p> </section>
+    	
+    		<section>
+    			<img src = gitbranchesstart.png> 
+    		</section>
+    		 <section>
+ 			  <img src = "gitintro.png" width= 40% >
+			  </section>
+    	</section>
+    	
+    	<section>
+    		<section> <h1> Git for personal use </h1> </section>
+    		<section> <ol> 
+    						<li> Make a git repository for a project. </li>
+    						<li> Make a change to the project and <em> commit </em> the change. </li>  
+    						<li> Make a  <em> branch </em> for the project. </li> 
+    						<li> <em> Merge </em> the branch to the master branch. </li>
+    		</ol>
+    	</section>
+    	<section> <iframe src="https://giphy.com/embed/CjmvTCZf2U3p09Cn0h" width="480" height="452" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></section>
+    	</section>
+
+		<section> 
+			<section>  <h2> git init. </h2> 
+						<h3> Creating a repository </h3> 
+			</section> 
+			<section> <ul> <li> Create a folder titled "git_practice." </li>
+							<li> Create a git repository.  </li>
+								<li style = "font-family: Lucida Console"> git init </li>
+								<img src = gitinit.png ></li>
+					</ul> 
+
+			</section>  
+		</section>
+
+		<section> <section>  <h2> git commit</h2> 
+							<h3> Taking a snapshot of your work history </h3>
+		</section> 
+		<section> 
+		<ul> <li> Create a text file called "myfile.txt" and write some comments inside of it.  </li>  
+			<li> Add this work to the git repository by a git commit.</li>
+			<li style = "font-family: Lucida Console"> git add myfile.txt </li>
+			<li style = "font-family: Lucida Console"> git commit -m "my first commit" </li>
+			<img src = gitcommit.png>  
+		</ul>
+		</section>
+		<section> <img src = stages.png> </section>
+		<section> <h3> What happens if you change things in the repository but you do not commit these changes?  </h3> 
+			<p class="fragment fade-up"> Git will know. </p>
+			</section>
+
+		
+
+		<section>
+		<ul>
+			<li> Make a change to "myfile.txt" in some way. </li>
+			<li>  Check the status of your git log.</li>
+			<li style = "font-family: Lucida Console">  git status </li>
+				 <img src = gitknows.png > 
+		</ul>
+		</section>	
+		<section>
+			<ul> 
+				<li> Take a look at the changes made. </li>
+			<li style = "font-family: Lucida Console">  git diff </li>
+			<li> Add and commit your changes. </li>
+			<img src = gitdiff.png width = 90%>
+		</ul>
+		</section>
+		<section> <img src = comiccommitmessage.png width = 110%> </section>
+
+		</section>
+		
+		<section> <section>  <h2> git branch </h2> 
+							<h3> Makes a branch from your current branch </h3>
+
+		</section>
+		<section> <img src = gitbranchonline.jpeg > </section> 
+		<section>  <ul>
+			<li> Create a new branch for Section 1.  </li>
+			<li style = "font-family: Lucida Console">  git branch section1 </li>
+			<li>  Not much has appeared to happen, you are still on the master branch.  </li>
+			<li style = "font-family: Lucida Console">  git checkout section1 </li>
+				 <img src = gitbranch.png> 
+		</ul>
+		</section>
+		<section>  <ul>
+			<li> While in branch section1, add some changes to myfile.txt pertaining to section1. </li>
+			<li>  Add and commit your changes.  </li>
+			<li>  Go back to the master branch. </li>
+			<li style = "font-family: Lucida Console">  git checkout master </li>
+				 <img src = gitbranch2.png> 
+			<li>  What do you notice in myfile.txt? </li>
+		</ul>
+		</section>
+		</section> 
+
+
+		<section> <section>  <h2> git merge </h2> 
+							<h3> Merges a branch to your current branch. </h3>
+		</section>
+		<section> <img src = gitmergeonline.png > </section> 
+		<section>  <ul>
+			<li> We will merge our section1 branch with the master branch.  </li>
+			<li style = "font-family: Lucida Console">  git merge section1 
+				 <img src = gitmerge.png> </li>
+		</ul>
+		</section>
+		<section>
+ 					<img src = mergeprinciple.png> 
+
+		</section>
+		<section>
+			<iframe src="https://giphy.com/embed/3ov9jWu7BuHufyLs7m" width="480" height="317" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+		</section>
+		</section> 
+
+
+
+		<section>
+			<section><h2>What is the difference between Git and GitHub?</h2></section>
+			<section>GitHub is a social networking site that allows users to collaborate on projects in an organized fashion.</section> 
+		</section>
+
+		<section>
+    		<section> <h1> GitHub for collaboration</h1> </section>
+    		<section> <ol> 
+    						<li> Get a github account. </li>
+    						<li> Become a collaborator on the MATH110OER repository. </li>
+    						<li> Git clone. </li>
+    						<li> Make some changes locally on a section. </li> 
+    						<li> Update the remote with the changes. </li> 
+    		</ol>
+    	</section>
+    	</section>
+
+    	<section>
+    		<h2> Collaboration on Github. </h2>
+    		<iframe src="https://giphy.com/embed/26xBAevSH9ORZM6tO" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    		<p> Make sure everyone is listed as a collaborator on the MATH110OER repository on github. </p>
+    	</section>	
+
+    	<section>
+    		<section>
+    			<h2> git clone </h2>
+    			<h3> Downloads a project with entire work history from the remote repository on github. </h3>
+			</section>
+		<section>
+			<ul>
+				<li> Create a local MATH110OER repository from the remote one on github. </li>
+				<li> Go to the directory where you would like to keep the MATH110OER project. </li>
+				<li style = "font-family: Lucida Console">  git clone https://github.com/polygonart6777/MATH110OER.git  </li>
+			</ul>
+		</section>	
+    	</section>
+
+    	<section>
+    		<section>
+    		 <h2> Branch, change, merge. </h2>
+    		 <ol>
+    		 	<li> We will make a branch on the section we want to change. </li>
+    		 	<li> Add something to that section. </li>
+    		 	<li> Go back to the master branch and merge the branch to master. </li>
+    		 	<li> Pull the information from the current repository. </li>
+    		 	<li> Push the changes you made locally onto the remote repository. </li>
+    		 </ol>
+    		</section>
+<section>
+	<h2> Make a branch and merge to master </h2>
+</section>
+    		<section> 
+			<ul> 
+				<li style = "font-family: Lucida Console"> git checkout -b &lt name of your branch &gt </li>
+				<li> Make some changes to the particular section of your choice. </li>
+				<li style = "font-family: Lucida Console"> git add .  </li> 
+				<li style = "font-family: Lucida Console"> git commit -am "message of your choice" </li>
+				<li style = "font-family: Lucida Console"> git checkout master </li>
+				<li style = "font-family: Lucida Console"> git merge &lt name of your branch &gt </li>
+</ul>
+</section>
+
+<section>
+	<h2> git pull </h2>
+		<h3> Fetches the changes from the remote and merges the changes to your local branch. </h3>
+		<p style = "font-family: Lucida Console"> git pull</p>
+	</section>
+	<section>
+		<h2> git push </h2>
+		<h3> Updates the remote repository with the changes on your local repository </h3>
+				<p style = "font-family: Lucida Console"> git push origin master</p>
+    		</section>
+
+
+    		<section>
+    			<iframe src="https://giphy.com/embed/11sBLVxNs7v6WA" width="500" height="237" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    		</section>
+</section>
+
+
+<section>
+	<section> <h1> Extra Important Features</h1> </section>
+	<section> 
+		<ul> 
+    						<li> Resolving merge conflicts. </li>
+    						<li> Going back in time with reset. </li>
+    						<li> Changing a commit. </li>
+    						 
+    		</ul>
+</section>
+</section>
+<section> <h2> References </h2>
+	<ul> 
+		<li> <a  href = "https://pretextbook.org/gfa/html/introduction.html">https://pretextbook.org/gfa/html/introduction.html </a> </li>
+		<li> <a  href = "https://git-scm.com/">https://git-scm.com/ </a> </li>
+		<li> <a  href = "https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud">https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud </a> </li>
+		<li> <a  href = "https://about.gitlab.com/images/press/git-cheat-sheet.pdf">https://about.gitlab.com/images/press/git-cheat-sheet.pdf</a> </li>
+	</ul>
+</section>
+		</div>
 		</div>
 
 		<script src="js/reveal.js"></script>
